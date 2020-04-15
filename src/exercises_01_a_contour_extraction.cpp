@@ -43,12 +43,12 @@ int main(int argc, char **argv) {
     // Do dilation
     cv::Mat kernel = cv::getStructuringElement(cv::MORPH_RECT,
         cv::Size(2 * size + 1, 2 * size + 1));
-    cv::Mat dilatedInput = input.clone();
-    cv::dilate(input, dilatedInput, kernel);
+    cv::Mat dilated_input = input.clone();
+    cv::dilate(input, dilated_input, kernel);
 
     // Do subtraction with the dilated image
     cv::Mat output = input.clone();
-    cv::subtract(dilatedInput, input, output);
+    cv::subtract(dilated_input, input, output);
 
     // namedWindow("Output Image", cv::WINDOW_AUTOSIZE);
     // imshow("Output Image", output);

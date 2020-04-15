@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <opencv2/opencv.hpp>
 #include <opencv2/imgproc.hpp>
+#include <fstream>
 #include "opencv2/imgproc.hpp"
 #include "opencv2/highgui.hpp"
 
@@ -14,7 +15,7 @@ int main(int argc, char **argv) {
     const cv::String arguments =
             "{help h usage ?    |       | print this message }"
             "{@input_image      |       | image for compare  }"
-            "{@output_image     |       | output image       }";
+            "{@output_txt       |       | output txt         }";
 
     cv::CommandLineParser parser(argc, argv, arguments);
     parser.about("Teeth Count app v1.0.0");
@@ -46,11 +47,11 @@ int main(int argc, char **argv) {
 
     // Erode with size one to separate gear
     cv::Mat kernel = cv::getStructuringElement(cv::MORPH_RECT, cv::Size(5, 5));
-    cv::Mat erodedInput = input.clone();
-    cv::erode(input, erodedInput, kernel);
+    cv::Mat eroded_input = input.clone();
+    cv::erode(input, eroded_input, kernel);
 
     // namedWindow("Eroded Image", cv::WINDOW_AUTOSIZE);
-    // imshow("Eroded Image", erodedInput);
+    // imshow("Eroded Image", eroded_input);
 
     // Do canny edge detection to locate edges
     int threshold = 50, ratio = 3, kernel_size = 3;
@@ -94,13 +95,13 @@ int main(int argc, char **argv) {
     //     cv::circle(drawing, hull.at(i), 2, color, 5);
     // }
 
-    std::cout << hull.size() << std::endl;
-
     // namedWindow("Convex hull Image", cv::WINDOW_AUTOSIZE);
     // imshow("Convex hull Image", drawing);
+    // cv::waitKey(0);
 
-    cv::waitKey(0);
-    // cv::imwrite(output_path, output);
+    std::ofstream output_file(output_path);
+    output_file << hull.size() << "\n";
+    output_file.close();
 
     return 0;
 }

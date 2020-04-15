@@ -46,7 +46,7 @@ int main(int argc, char **argv) {
         cv::Size(2 * size + 1, 2 * size + 1));
 
     // Do subtraction with the dilated image
-    cv::Mat output = Utils::grassfirePropagate(input, kernel);
+    cv::Mat output = Utils::GrassFirePropagate(input, kernel);
 
     // namedWindow("Output Image", cv::WINDOW_AUTOSIZE);
     // imshow("Output Image", output);
