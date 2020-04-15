@@ -1,15 +1,10 @@
-cmake_minimum_required(VERSION 3.15)
+cmake_minimum_required(VERSION 3.10)
 project(Segmentation)
 
 set(CMAKE_CXX_STANDARD 14)
-
-cmake_minimum_required(VERSION 3.15)
-project(IPAC_Excercises)
-
-set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
 
-set(OpenCV_DIR "C:\\OpenCV\\mingw-build\\install")
+set(OpenCV_DIR "C:\\opencv\\build\\x64\\vc14\\lib")
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/")
 find_package(OpenCV REQUIRED)
 include_directories(${OpenCV_INCLUDE_DIRS})
