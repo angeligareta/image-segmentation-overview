@@ -25,7 +25,7 @@ This exercises have been developed in the following environment:
 ## Project structure
 The project is structured as:
 - data: Contains all the images that serve as input examples for the developed programs. 
-- output: Example of output from the programs.
+- programs: Compiled version of src programs.
 - src: Contains all the code with an utils folder and the main programs for the exercises.
 - CMakeLists.txt: Used to compile with cmake.
 
