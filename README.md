@@ -1,7 +1,14 @@
 # Image Segmentation
-## Introduction
-In this project, exercises in the area of image segmentation are developed, specifically:
+<h1 align="center">Image Processing Overview</h1>
+<h4 align="center">Projects developed for the Image Processing, Analysis And Classification course of the EIT Digital data science master at <a href="https://www.upm.es/">UPM</a></h4>
 
+<p align="center">
+  <img alt="UPM" src="https://img.shields.io/badge/EIT%20Digital-UPM-blue?style=flat-square">
+  <img alt="License" src="https://img.shields.io/github/license/angeligareta/image-processing-overview?style=flat-square" />
+</p>
+
+## Introduction
+The [excercises](src/) developed in the area of image segmentation are the following:
 - __Flatzone detection:__ Given pixel coordinates, neighborhood connectivity and region label, detect the flat zone where the origin pixel is and output an image with that region colored with the input label. 
 - __Regional minimum and maximum:__ Given pixel coordinates and neighborhood connectivity, output if the origin pixel is a regional minimum, regional maximum or nothing.
 - __Contour extraction:__ Extract contour from an image using the morphological operations of erosion or dilation.
@@ -56,3 +63,6 @@ The project is structured as:
 ```
 ./programs/exercises_02_b_watershed ./data/coffee_grains.jpg ./output/coffee_markers.jpg
 ```
+
+## Author
+- Angel Igareta [angel@igareta.com](mailto:angel@igareta.com) 
