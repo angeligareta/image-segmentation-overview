@@ -7,13 +7,13 @@
 </p>
 
 ## Introduction
-The [excercises](src/) developed in the area of image segmentation are the following:
-- __Flatzone detection:__ Given pixel coordinates, neighborhood connectivity and region label, detect the flat zone where the origin pixel is and output an image with that region colored with the input label. 
-- __Regional minimum and maximum:__ Given pixel coordinates and neighborhood connectivity, output if the origin pixel is a regional minimum, regional maximum or nothing.
-- __Contour extraction:__ Extract contour from an image using the morphological operations of erosion or dilation.
-- __Grassfire propagation algorithm:__ Detect all the flatzones in the image and output them with different random colors.
-- __Teeth count from gear:__ Given an image of a gear, this program will output an approximate teeth number. 
-- __Watershed markers:__ Apply watershed algorithm.
+The exercises developed in the area of image segmentation are the following:
+- __Contour extraction:__ Extract contour from an image using the morphological operations of erosion or dilation. (Exercise [1a](src/exercises_01_a_contour_extraction.cpp))
+- __Grassfire propagation algorithm:__ Detect all the flatzones in the image and output them with different random colors. (Exercise [1b](src/exercises_01_b_grassfire.cpp))
+- __Teeth count from gear:__ Given an image of a gear, this program will output an approximate teeth number. (Exercise [2a](src/exercises_02_a_wheel_teeth_count.cpp))
+- __Watershed markers:__ Apply watershed algorithm. (Exercise [2b](src/exercises_02_b_watershed.cpp))
+ - __Flatzone detection:__ Given pixel coordinates, neighborhood connectivity and region label, detect the flat zone where the origin pixel is and output an image with that region colored with the input label. (Exercise [11](src/exercises_11_a_flatzone.cpp))
+- __Regional minimum and maximum:__ Given pixel coordinates and neighborhood connectivity, output if the origin pixel is a regional minimum, regional maximum or nothing. (Exercise [13a](src/exercises_13_a_minimum.cpp) and [13b](src/exercises_13_b_maximum.cpp))
 
 ## Environment
 This exercises have been developed in the following environment:
