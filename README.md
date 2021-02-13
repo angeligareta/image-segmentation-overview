@@ -1,4 +1,4 @@
-<h1 align="center">Image Processing Overview</h1>
+<h1 align="center">Image Segmentation Overview</h1>
 <h4 align="center">Projects developed for the Image Processing, Analysis And Classification course of the EIT Digital data science master at <a href="https://www.upm.es/">UPM</a></h4>
 
 <p align="center">
